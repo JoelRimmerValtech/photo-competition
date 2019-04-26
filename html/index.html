@@ -8,9 +8,10 @@
     <meta name="author" content="Softwire">
 
     <!-- Title -->
-    <title>Photo Competition - Home</title>
+    <title>Snapshot! - Home</title>
 
     <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link rel="stylesheet" href="../stylesheets/common.css">
 
     <!-- Vendor JS -->
@@ -26,42 +27,47 @@
 <!-- Navigation bar -->
 <nav class="navbar main-content">
     <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-title" href="index.html">Photo Competition</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="about.html">About</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="uploadphoto.html">Upload Snap!</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="topratedphoto.html">Top Rated Snap!</a></li>
+        <li class="navbar-item home"><a class="navbar-link navbar-title" href="index.html">Snapshot!</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="about.html">About Snap!</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="photomanagement.html">Snap! Manager!</a></li>
     </ul>
 </nav>
 
 <!-- Page content -->
 <div class="main-content">
-    <h1 class="page-title">Photo Competition</h1>
+    <h1 class="page-title">Snapshot Competition</h1>
+
+    <table class="image-details">
+        <tbody>
+        <tr>
+            <td><b>Author</b></td>
+            <td id="author"></td>
+        </tr>
+        <tr>
+            <td><b>Name</b></td>
+            <td id="name"></td>
+        </tr>
+        <tr>
+            <td><b>License</b></td>
+            <td id="license"></td>
+        </tr>
+        </tbody>
+    </table>
 
     <div class="image-container">
         <!-- src and alt attribute will be populated by index.js on page load -->
         <img id="main-image" src="">
     </div>
 
-    <div class="voting-buttons">
-        <button class="voting-button vote-up">I love it</button>
-        <button class="voting-button vote-down">I hate it</button>
-    </div>
 
-    <table class="image-details">
-        <tbody>
-            <tr>
-                <td><b>Author</b></td>
-                <td>TODO: Fill in author details.</td>
-            </tr>
-            <tr>
-                <td><b>Name</b></td>
-                <td>TODO: Fill in image details.</td>
-            </tr>
-            <tr>
-                <td><b>Licence</b></td>
-                <td>TODO: Fill in licence details.</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="voting-buttons">
+        <button class="voting-button vote-up" onclick="voteUpImage()">Sick Snap! 😎</button>
+        <button class="voting-button vote-down" onclick="voteDownImage()">S*** Snap! 🤮</button>
+    </div>
 </div>
+
 
 </body>
 </html>

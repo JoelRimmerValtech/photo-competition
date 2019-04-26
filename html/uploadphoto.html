@@ -1,14 +1,13 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <!-- Essential meta tags -->
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- Essential meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Softwire Web Development Training Example">
     <meta name="author" content="Softwire">
 
     <!-- Title -->
-    <title>Snapshot! - About</title>
+    <title>Snapshot! - Upload Snap</title>
 
     <!-- Custom CSS -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
@@ -16,6 +15,10 @@
 
     <!-- Vendor JS -->
     <script src="../js/vendor/jquery-3.3.1.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/common.js"></script>
+    <script src="../js/uploadphoto.js"></script>
 </head>
 
 <body>
@@ -33,25 +36,34 @@
 
 <!-- Page content -->
 <div class="main-content">
+    <h1 class="page-title">Upload your Snap!</h1>
 
-    <h1 class="page-title">Snaps This?</h1>
-
-    <div class="about">
-        <p>Snapshot! lets you view images from around the world and then vote on whether you love them or hate them!</p>
-        <p>Feel like you've a snap worth sharing? Upload it now via our upload page and let users vote on whether they love it or hate it! </p>
-    </div>
-
-    <div class="author">
-        <div class="photo-text">
-            <p class="authorheader">The Creator!</p>
-            <p class="authorbody">Meet Joel, the guy behind the collection of snaps...</p>
+    <form action="" method="get" class="uploadform">
+        <div class="form-example">
+            <label id="snapname-input" for="snapname">Browse for your Snap! </label>
+            <input type="file" id="snapname" required>
         </div>
-        <div class="photo">
-            <img src="../images/Joel.JPG"/>
+        <div class="form-example">
+            <label for="snapauthor">Snap! Author: </label>
+            <input type="text" id="snapauthor" required>
         </div>
-    </div>
-</div>
+        <div class="form-example">
+            <label for="snaptitle">Snap! Title: </label>
+            <input type="text" id="snaptitle" required>
+        </div>
+        <div class="form-example">
+            <label for="snaplicense">Snap! License: </label>
+            <input type="text" id="snaplicense" required>
+        </div>
+        <div class="form-example">
+            <button class ="submit" type="button" onclick="uploadImage()">Upload Snap!</button>
+        </div>
+    </form>
 </div>
 
+</head>
+<body>
+
+</body>
 </body>
 </html>
